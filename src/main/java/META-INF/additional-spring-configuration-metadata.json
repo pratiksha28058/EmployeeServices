@@ -1,0 +1,52 @@
+{"properties": [
+  {
+    "name": "endpoints.web.exposure.include",
+    "type": "java.lang.String",
+    "description": "A description for 'endpoints.web.exposure.include'"
+  },
+  {
+    "name": "endpoint.health.show-details",
+    "type": "java.lang.String",
+    "description": "A description for 'endpoint.health.show-details'"
+  },
+  {
+    "name": "elastic.apm.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'elastic.apm.enabled'"
+  },
+  {
+    "name": "elastic.apm.enable_log_correlation",
+    "type": "java.lang.String",
+    "description": "A description for 'elastic.apm.enable_log_correlation'"
+  },
+  {
+    "name": "elastic.apm.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'elastic.apm.enabled'"
+  },
+  {
+    "name": "setup.kibana.host",
+    "type": "java.lang.String",
+    "description": "A description for 'setup.kibana.host'"
+  },
+  {
+    "name": "setup.dashboards.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'setup.dashboards.enabled'"
+  },
+  {
+    "name": "elastic.apm.verify_server_cert",
+    "type": "java.lang.String",
+    "description": "A description for 'elastic.apm.verify_server_cert'"
+  },
+  {
+    "name": "elastic.apm.log_sending",
+    "type": "java.lang.String",
+    "description": "A description for 'elastic.apm.log_sending'"
+  },
+  {
+    "name": "elastic.apm.verify_server_cert",
+    "type": "java.lang.String",
+    "description": "A description for 'elastic.apm.verify_server_cert'"
+  }
+]}

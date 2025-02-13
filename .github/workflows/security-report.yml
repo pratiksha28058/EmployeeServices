@@ -1,0 +1,74 @@
+name: Generate Security Report
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  security_report:
+    runs-on: ubuntu-latest
+
+    env:
+      GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+      
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up GitHub CLI
+      run: sudo apt-get install -y gh
+
+    # - name: Authenticate GitHub CLI
+    #   run: |
+    #     gh auth login --with-token <<< "${GIT_TOKEN}"
+    #     gh auth status
+    #     #gh api -H "Accept: application/vnd.github+json"  -H "Authorization: token ${{ secrets.GIT_TOKEN }}" https://api.github.com/repos/pratiksha2805-eng/EmployeeService/code-scanning/alerts
+
+    # - name: Check API Rate Limit
+    #   run: |
+    #     gh api rate_limit
+    #     gh api -H "Accept: application/vnd.github+json" /rate_limit
+
+        #gh api -H "Accept: application/vnd.github+json" https://api.github.com/repos/pratiksha2805-eng/EmployeeService/code-scanning/alerts
+
+    - name: Fetch Code Scanning Alerts with Retry
+      run: |
+        curl -H "Authorization: token ${{ secrets.GIT_TOKEN }}" https://api.github.com/repos/pratiksha2805-eng/EmployeeService/code-scanning/alerts > code_scanning_report.json
+        curl -H "Authorization: token ${{ secrets.GIT_TOKEN }}" https://api.github.com/repos/pratiksha2805-eng/EmployeeService/dependabot/alerts > dependabot_report.json
+        
+
+
+    # - name: Get Rate Limit 
+    #   run: |
+    #     curl -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ secrets.GIT_TOKEN }}" https://api.github.com/rate_limit
+
+    - name: List Report 
+      run: |
+        response=$(curl -s -H "Authorization: Bearer ${{ secrets.GIT_TOKEN }}" https://api.github.com/repos/pratiksha2805-eng/EmployeeService/code-scanning/alerts)
+        if echo "$response" | grep -q "rate limit exceeded"; then
+          echo "Rate limit exceeded. Waiting for reset..."
+          sleep 3600  # Wait for 1 hour before retrying
+          exit 1
+        else
+          echo "$response" > security_report.json
+        fi
+    
+    - name: List Report 
+      run: |
+        curl -H "Authorization: Bearer ${{ secrets.GIT_TOKEN }}" -I https://api.github.com/repos/pratiksha2805-eng/EmployeeService/code-scanning/alerts
+
+
+    - name: Send Email Report
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 587
+        username: ${{ secrets.SMTP_USERNAME }}
+        password: ${{ secrets.SMTP_APP_PASSWORD }}
+        subject: "Weekly Security Report"
+        body: "Security reports attached."
+        to: "sony2887@gmail.com"
+        from: "pratikshatiwari10042@gmail.com"
+        attachments: code_scanning_report.json, dependabot_report.json, security_report.json

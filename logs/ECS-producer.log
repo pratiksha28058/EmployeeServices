@@ -1,0 +1,226 @@
+2023-05-25 12:39:05.758  WARN 21868 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12h41m29s491ms721µs600ns).
+2023-05-25 14:29:43.195  INFO 20260 --- [restartedMain] c.web.spring.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 17.0.7 on LPBL5CD2030NMW with PID 20260 (D:\Study\Application\java\EmployeeService\EmployeeService\target\classes started by Pratiksha.Tiwari in D:\Study\Application\java\EmployeeService\EmployeeService)
+2023-05-25 14:29:43.197  INFO 20260 --- [restartedMain] c.web.spring.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-05-25 14:29:43.230  INFO 20260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-25 14:29:43.829  INFO 20260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 14:29:43.866  INFO 20260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+2023-05-25 14:29:44.526  INFO 20260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2023-05-25 14:29:44.533  INFO 20260 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-25 14:29:44.533  INFO 20260 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-25 14:29:44.634  INFO 20260 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-25 14:29:44.635  INFO 20260 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1405 ms
+2023-05-25 14:29:44.801  INFO 20260 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-25 14:29:44.934  INFO 20260 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-25 14:29:44.943  INFO 20260 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2023-05-25 14:29:45.004 DEBUG 20260 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: filterRegistrationBean urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2023-05-25 14:29:45.004 DEBUG 20260 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/], webServlet urls=[/h2/*]
+2023-05-25 14:29:45.116  INFO 20260 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-25 14:29:45.150  INFO 20260 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-25 14:29:45.258  INFO 20260 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-25 14:29:45.341  INFO 20260 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-25 14:29:45.713  INFO 20260 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-25 14:29:45.719  INFO 20260 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-25 14:29:50.017  WARN 20260 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-25 14:29:50.412 DEBUG 20260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-25 14:29:50.526 DEBUG 20260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2023-05-25 14:29:50.565 DEBUG 20260 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-25 14:29:50.579 DEBUG 20260 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-25 14:29:51.326  WARN 20260 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-05-25 14:29:51.335  INFO 20260 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-25 14:29:51.407  INFO 20260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-25 14:29:51.422  INFO 20260 --- [restartedMain] c.web.spring.EmployeeServiceApplication  : Started EmployeeServiceApplication in 8.541 seconds (JVM running for 9.29)
+2023-05-25 14:29:52.244  INFO 20260 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-25 14:29:52.244  INFO 20260 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-25 14:29:52.245 DEBUG 20260 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-05-25 14:29:52.245 DEBUG 20260 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-05-25 14:29:52.245 DEBUG 20260 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-05-25 14:29:52.246 DEBUG 20260 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@426d238f
+2023-05-25 14:29:52.246 DEBUG 20260 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@21e6c025
+2023-05-25 14:29:52.246 DEBUG 20260 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-25 14:29:52.246  INFO 20260 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-05-25 14:34:02.507 DEBUG 20260 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/admin", parameters={}
+2023-05-25 14:34:02.520 DEBUG 20260 --- [http-nio-8001-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.web.spring.controller.EmployeeController#saveAddress(Employee)
+2023-05-25 14:34:02.841 DEBUG 20260 --- [http-nio-8001-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [id=0, name=test11]]
+2023-05-25 14:34:02.849  INFO 20260 --- [http-nio-8001-exec-1] c.w.s.controller.EmployeeController      : details saved in producer service
+2023-05-25 14:34:03.059 DEBUG 20260 --- [http-nio-8001-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, application/*+json] and supported [application/json, application/*+json, application/json, application/*+json, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8]
+2023-05-25 14:34:03.060 DEBUG 20260 --- [http-nio-8001-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [Employee [id=1, name=test11]]
+2023-05-25 14:34:03.074 DEBUG 20260 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-05-25 14:39:12.891  INFO 20260 --- [RMI TCP Connection(15)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-05-25 14:39:12.927  INFO 20260 --- [RMI TCP Connection(15)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-25 14:39:13.329  WARN 20260 --- [RMI TCP Connection(15)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-05-25 14:39:13.330  INFO 20260 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-25 14:39:13.332  INFO 20260 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-25 14:48:56.522  INFO 25428 --- [restartedMain] c.web.spring.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 17.0.7 on LPBL5CD2030NMW with PID 25428 (D:\Study\Application\java\EmployeeService\EmployeeService\target\classes started by Pratiksha.Tiwari in D:\Study\Application\java\EmployeeService\EmployeeService)
+2023-05-25 14:48:56.523  INFO 25428 --- [restartedMain] c.web.spring.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-05-25 14:48:56.559  INFO 25428 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-25 14:48:57.244  INFO 25428 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 14:48:57.287  INFO 25428 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2023-05-25 14:48:58.085  INFO 25428 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2023-05-25 14:48:58.094  INFO 25428 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-25 14:48:58.095  INFO 25428 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-25 14:48:58.222  INFO 25428 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-25 14:48:58.222  INFO 25428 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1662 ms
+2023-05-25 14:48:58.427  INFO 25428 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-25 14:48:58.609  INFO 25428 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-25 14:48:58.620  INFO 25428 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2023-05-25 14:48:58.698 DEBUG 25428 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: filterRegistrationBean urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2023-05-25 14:48:58.699 DEBUG 25428 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/], webServlet urls=[/h2/*]
+2023-05-25 14:48:58.858  INFO 25428 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-25 14:48:58.916  INFO 25428 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-25 14:48:59.111  INFO 25428 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-25 14:48:59.232  INFO 25428 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-25 14:48:59.749  INFO 25428 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-25 14:48:59.757  INFO 25428 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-25 14:49:06.727  WARN 25428 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-25 14:49:07.206 DEBUG 25428 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-25 14:49:07.352 DEBUG 25428 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2023-05-25 14:49:07.410 DEBUG 25428 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-25 14:49:07.429 DEBUG 25428 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-25 14:49:08.348  WARN 25428 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-05-25 14:49:08.358  INFO 25428 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-25 14:49:08.430  INFO 25428 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-25 14:49:08.448  INFO 25428 --- [restartedMain] c.web.spring.EmployeeServiceApplication  : Started EmployeeServiceApplication in 12.262 seconds (JVM running for 14.069)
+2023-05-25 14:49:09.714  INFO 25428 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-25 14:49:09.715  INFO 25428 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-25 14:49:09.715 DEBUG 25428 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-05-25 14:49:09.716 DEBUG 25428 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-05-25 14:49:09.716 DEBUG 25428 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-05-25 14:49:09.718 DEBUG 25428 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@57b7a365
+2023-05-25 14:49:09.718 DEBUG 25428 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7aacabf1
+2023-05-25 14:49:09.718 DEBUG 25428 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-25 14:49:09.718  INFO 25428 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-05-25 14:49:25.576 DEBUG 25428 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/admin", parameters={}
+2023-05-25 14:49:25.593 DEBUG 25428 --- [http-nio-8001-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.web.spring.controller.EmployeeController#saveAddress(Employee)
+2023-05-25 14:49:25.889 DEBUG 25428 --- [http-nio-8001-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [id=0, name=test12]]
+2023-05-25 14:49:25.902  INFO 25428 --- [http-nio-8001-exec-1] c.w.s.controller.EmployeeController      : details saved in producer service
+2023-05-25 14:49:26.148 DEBUG 25428 --- [http-nio-8001-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, application/*+json] and supported [application/json, application/*+json, application/json, application/*+json, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8]
+2023-05-25 14:49:26.150 DEBUG 25428 --- [http-nio-8001-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [Employee [id=1, name=test12]]
+2023-05-25 14:49:26.171 DEBUG 25428 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-05-25 14:50:13.325 DEBUG 25428 --- [http-nio-8001-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/admin", parameters={}
+2023-05-25 14:50:13.326 DEBUG 25428 --- [http-nio-8001-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.web.spring.controller.EmployeeController#saveAddress(Employee)
+2023-05-25 14:50:13.327 DEBUG 25428 --- [http-nio-8001-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [id=0, name=test124]]
+2023-05-25 14:50:13.328  INFO 25428 --- [http-nio-8001-exec-2] c.w.s.controller.EmployeeController      : details saved in producer service
+2023-05-25 14:50:13.329 DEBUG 25428 --- [http-nio-8001-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, application/*+json] and supported [application/json, application/*+json, application/json, application/*+json, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8]
+2023-05-25 14:50:13.329 DEBUG 25428 --- [http-nio-8001-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [Employee [id=2, name=test124]]
+2023-05-25 14:50:13.331 DEBUG 25428 --- [http-nio-8001-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-05-25 14:50:18.664 DEBUG 25428 --- [http-nio-8001-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/admin", parameters={}
+2023-05-25 14:50:18.664 DEBUG 25428 --- [http-nio-8001-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.web.spring.controller.EmployeeController#saveAddress(Employee)
+2023-05-25 14:50:18.665 DEBUG 25428 --- [http-nio-8001-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [id=1, name=test126]]
+2023-05-25 14:50:18.665  INFO 25428 --- [http-nio-8001-exec-3] c.w.s.controller.EmployeeController      : details saved in producer service
+2023-05-25 14:50:18.703 DEBUG 25428 --- [http-nio-8001-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, application/*+json] and supported [application/json, application/*+json, application/json, application/*+json, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8]
+2023-05-25 14:50:18.703 DEBUG 25428 --- [http-nio-8001-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [Employee [id=1, name=test126]]
+2023-05-25 14:50:18.704 DEBUG 25428 --- [http-nio-8001-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-05-25 14:52:05.511  INFO 25428 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-05-25 14:52:05.545  INFO 25428 --- [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-25 14:52:05.951  WARN 25428 --- [RMI TCP Connection(6)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-05-25 14:52:05.953  INFO 25428 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-25 14:52:05.955  INFO 25428 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-25 14:52:27.706  INFO 12020 --- [restartedMain] c.web.spring.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 17.0.7 on LPBL5CD2030NMW with PID 12020 (D:\Study\Application\java\EmployeeService\EmployeeService\target\classes started by Pratiksha.Tiwari in D:\Study\Application\java\EmployeeService\EmployeeService)
+2023-05-25 14:52:27.708  INFO 12020 --- [restartedMain] c.web.spring.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-05-25 14:52:27.766  INFO 12020 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-25 14:52:28.770  INFO 12020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 14:52:28.827  INFO 12020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interfaces.
+2023-05-25 14:52:29.874  INFO 12020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2023-05-25 14:52:29.886  INFO 12020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-25 14:52:29.887  INFO 12020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-25 14:52:30.101  INFO 12020 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-25 14:52:30.101  INFO 12020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2335 ms
+2023-05-25 14:52:30.358  INFO 12020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-25 14:52:30.613  INFO 12020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-25 14:52:30.626  INFO 12020 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2023-05-25 14:52:30.747 DEBUG 12020 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: filterRegistrationBean urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2023-05-25 14:52:30.748 DEBUG 12020 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/], webServlet urls=[/h2/*]
+2023-05-25 14:52:30.945  INFO 12020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-25 14:52:31.012  INFO 12020 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-25 14:52:31.190  INFO 12020 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-25 14:52:31.318  INFO 12020 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-25 14:52:32.125  INFO 12020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-25 14:52:32.142  INFO 12020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-25 14:52:40.714  WARN 12020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-25 14:52:41.478 DEBUG 12020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-25 14:52:41.733 DEBUG 12020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2023-05-25 14:52:41.831 DEBUG 12020 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-25 14:52:41.867 DEBUG 12020 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-25 14:52:44.119  WARN 12020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-05-25 14:52:44.146  INFO 12020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-25 14:52:44.344  INFO 12020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-25 14:52:44.377  INFO 12020 --- [restartedMain] c.web.spring.EmployeeServiceApplication  : Started EmployeeServiceApplication in 17.187 seconds (JVM running for 20.546)
+2023-05-25 14:52:45.459  INFO 12020 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-25 14:52:45.460  INFO 12020 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-25 14:52:45.461 DEBUG 12020 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-05-25 14:52:45.461 DEBUG 12020 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-05-25 14:52:45.461 DEBUG 12020 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-05-25 14:52:45.465 DEBUG 12020 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@283e06b1
+2023-05-25 14:52:45.466 DEBUG 12020 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@52afa3c
+2023-05-25 14:52:45.466 DEBUG 12020 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-25 14:52:45.466  INFO 12020 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-05-25 14:53:45.724 DEBUG 12020 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/admin", parameters={}
+2023-05-25 14:53:45.738 DEBUG 12020 --- [http-nio-8001-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.web.spring.controller.EmployeeController#saveAddress(Employee)
+2023-05-25 14:53:46.013 DEBUG 12020 --- [http-nio-8001-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Employee [id=0, name=test13]]
+2023-05-25 14:53:46.022  INFO 12020 --- [http-nio-8001-exec-1] c.w.s.controller.EmployeeController      : details saved in producer service
+2023-05-25 14:53:46.216 DEBUG 12020 --- [http-nio-8001-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, application/*+json] and supported [application/json, application/*+json, application/json, application/*+json, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8]
+2023-05-25 14:53:46.217 DEBUG 12020 --- [http-nio-8001-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [Employee [id=1, name=test13]]
+2023-05-25 14:53:46.230 DEBUG 12020 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-05-25 14:55:16.800  INFO 12020 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-25 14:55:17.018  WARN 12020 --- [Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-05-25 14:55:17.020  INFO 12020 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-25 14:55:17.022  INFO 12020 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-25 14:55:17.141  INFO 12020 --- [restartedMain] c.web.spring.EmployeeServiceApplication  : Starting EmployeeServiceApplication using Java 17.0.7 on LPBL5CD2030NMW with PID 12020 (D:\Study\Application\java\EmployeeService\EmployeeService\target\classes started by Pratiksha.Tiwari in D:\Study\Application\java\EmployeeService\EmployeeService)
+2023-05-25 14:55:17.141  INFO 12020 --- [restartedMain] c.web.spring.EmployeeServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-05-25 14:55:17.386  INFO 12020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-25 14:55:17.395  INFO 12020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interfaces.
+2023-05-25 14:55:17.545  INFO 12020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2023-05-25 14:55:17.546  INFO 12020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-25 14:55:17.546  INFO 12020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-25 14:55:17.582  INFO 12020 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-25 14:55:17.582  INFO 12020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 438 ms
+2023-05-25 14:55:17.687  INFO 12020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-05-25 14:55:17.688  INFO 12020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-05-25 14:55:17.688  INFO 12020 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2023-05-25 14:55:17.730 DEBUG 12020 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: filterRegistrationBean urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2023-05-25 14:55:17.732 DEBUG 12020 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/], webServlet urls=[/h2/*]
+2023-05-25 14:55:17.763  INFO 12020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-25 14:55:17.769  INFO 12020 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-25 14:55:17.788  INFO 12020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-25 14:55:17.788  INFO 12020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-25 14:55:17.972  WARN 12020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-25 14:55:18.110 DEBUG 12020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-25 14:55:18.151 DEBUG 12020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2023-05-25 14:55:18.179 DEBUG 12020 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-25 14:55:18.192 DEBUG 12020 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-25 14:55:18.658  WARN 12020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-05-25 14:55:18.668  INFO 12020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-25 14:55:18.695  INFO 12020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2023-05-25 14:55:18.702  INFO 12020 --- [restartedMain] c.web.spring.EmployeeServiceApplication  : Started EmployeeServiceApplication in 1.621 seconds (JVM running for 174.871)
+2023-05-25 14:55:18.705  INFO 12020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-05-25 15:01:09.433  INFO 12020 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-05-25 15:01:09.470  INFO 12020 --- [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-25 15:01:09.677 ERROR 12020 --- [HikariPool-2 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Error thrown while acquiring connection from data source
+
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: The database is open in exclusive mode; can not open additional connections [90135-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.SessionLocal.checkSuspended(SessionLocal.java:1240)
+	at org.h2.engine.SessionLocal.transitionToState(SessionLocal.java:1232)
+	at org.h2.engine.SessionLocal.setCurrentCommand(SessionLocal.java:1210)
+	at org.h2.engine.SessionLocal.startStatementWithinTransaction(SessionLocal.java:1658)
+	at org.h2.command.Command.executeQuery(Command.java:184)
+	at org.h2.jdbc.JdbcConnection.isReadOnly(JdbcConnection.java:538)
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:408)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2023-05-25 15:01:09.879  WARN 12020 --- [RMI TCP Connection(13)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-05-25 15:01:09.881  INFO 12020 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-05-25 15:01:09.930  INFO 12020 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.

@@ -1,0 +1,8 @@
+{
+    "alerts": [
+        { "rule": { "severity": "high" } },
+        { "rule": { "severity": "low" } },
+        { "rule": { "severity": "medium" } },
+        { "rule": { "severity": "pratiksha" } }
+    ]
+}

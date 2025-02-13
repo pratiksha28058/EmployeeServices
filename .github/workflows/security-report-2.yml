@@ -1,0 +1,47 @@
+name: Security Dashboard Report Check 
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  fetch-security-report:
+    runs-on: ubuntu-latest
+
+    env:
+      GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Fetch Security Dashboard Report
+      id: fetch-report
+      run: |
+        curl -H "Authorization: token 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" https://api.github.com/repos/pratiksha2805-eng/EmployeeService/code-scanning/alerts
+        curl -H "Authorization: token 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" https://api.github.com/user
+        curl -H "Authorization: token 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" https://api.github.com/user
+        curl -H "Authorization: token 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" https://api.github.com/orgs/pratiksha2805-eng
+
+
+
+   
+    # - name: Compress Report (Optional)
+    #   run: gzip security_report.json
+
+    # - name: Send Email with Report
+    #   uses: dawidd6/action-send-mail@v3
+    #   with:
+    #     server_address: smtp.gmail.com
+    #     server_port: 587
+    #     username: ${{ secrets.SMTP_USERNAME }}
+    #     password: ${{ secrets.SMTP_PASSWORD }}
+    #     subject: GitHub Security Dashboard Report
+    #     body: |
+    #       Please find attached the latest security report.
+    #     to: sony2887@gmail.com
+    #     from: pratikshatiwari10042@gmail.com
+    #     attachments: security_report.json.gz

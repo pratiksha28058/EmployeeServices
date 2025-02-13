@@ -1,0 +1,20 @@
+# name: custom-queries
+# version: 0.0.1
+# dependencies:
+#   codeql/javascript-all: "*"
+
+name: codeql/java-queries
+version: 1.1.11-dev
+groups:
+  - java
+  - queries
+suites: codeql-suites
+extractor: java
+defaultSuiteFile: codeql-suites/java-code-scanning.qls
+dependencies:
+  codeql/java-all: "*"
+  codeql/suite-helpers: "*"
+  codeql/util: "*"
+dataExtensions:
+  - Telemetry/ExtractorInformation.yml
+warnOnImplicitThis: true

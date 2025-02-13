@@ -1,0 +1,60 @@
+POST-http://localhost:8001/users
+
+    {
+        "id": 1001,
+        "name": "Rohan",
+        "mobile": "9999432322",
+        "designation": "Automation",
+        "address": "gurgaon",
+        "salary": 20000
+    }
+    
+    
+  GET ALL EMPLOYEE
+  GET-http://localhost:8001/users
+  
+  GET SINGLE EMPLOYEE
+  GET- http://localhost:8001/users/
+  
+  UPDATE EMPLOYEE
+  PUT- http://localhost:8001/users/
+  
+  DELETE EMPLOYEE
+  DELETE- http://localhost:8001/users/
+  
+  PARTIAL UPDATE MOBILE
+  PATCH- http://localhost:8001/users/
+  
+  
+  1) try catch is not working when circuit breaker is on
+  
+  
+  -----------------------------------------------------------------------
+  
+  TESTING----
+  
+      {
+        "id": 2,
+        "name": "Rohan",
+        "mobile": "99992000",
+        "designation": "HR",
+        "address": "gurgaon",
+        "salary": 30000
+    }
+  
+
+  
+
+final-
+docker build -t spring-boot-main.jar .
+ docker run --net  consumer-producer --name consumer --env EMP_ADMIN_BASE_URL='http://producer:8001/admin' --env APM_SERVICE_URL='http://34.132.191.86:8200' -d -p 8013:8013 spring-boot-main.jar
+
+
+docker build -t spring-boot-employee.jar .
+ docker run --net  consumer-producer --name producer --env APM_SERVICE_URL='http://34.132.191.86:8200' -d -p 8001:8001 spring-boot-employee.jar
+
+docker network rm consumer-producer
+docker network create consumer-producer
+  
+  
+  

@@ -1,0 +1,33 @@
+name: Deploy to Local System
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set Up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.9"
+
+      - name: Install Dependencies
+        run: pip install -r dashboard/30days/requirements.txt
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 192.168.1.5 >> ~/.ssh/known_hosts
+
+      - name: Deploy to Local System
+        run: |
+          ssh user@192.168.1.5 "cd C:\project\github-security\python\interactive-dashboard && git pull origin main && systemctl restart my-python-app"

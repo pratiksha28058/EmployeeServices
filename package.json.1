@@ -1,0 +1,23 @@
+{
+  "name": "unused-dependencies-example",
+  "version": "1.0.0",
+  "description": "Example project with unused dependencies",
+  "main": "index.js",
+  "dependencies": {
+    "moment": "^2.29.1",       // Unused dependency
+    "lodash": "^4.17.21",      // Used dependency
+    "uuid": "^8.3.2",           // Unused dependency
+    "axios": "0.21.0",            // Known Server-Side Request Forgery (SSRF) vulnerability
+    "express": "4.16.1"           // Known Regular Expression Denial of Service (ReDoS) vulnerability
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",       // Used for linting
+    "jest": "^29.0.0",          // Unused dependency
+    "mocha": "6.1.4"   
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

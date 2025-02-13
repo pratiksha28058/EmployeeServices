@@ -1,0 +1,68 @@
+name: Generate and Email GitHub Security Graph
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  generate-and-email:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the Repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Python Environment
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.9"
+
+    # Step 3: Install Dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install matplotlib sendgrid requests
+
+
+
+    #get json file
+    - name: Check for security report
+      run: |
+        ls -la
+        cat security_report.json
+
+    # Step 4: Fetch Security Alerts via GitHub API
+    - name: Fetch security alerts
+      env:
+        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+      run: |
+        curl -H "Authorization: token $GITHUB_TOKEN" \
+             -H "Accept: application/vnd.github+json" \
+             https://api.github.com/repos/${{ github.repository }}/code-scanning/alerts \
+             -o security_report1.json
+
+    # Step 5: Run Python Script to Generate Graph
+    - name: Generate security graph
+      env:
+        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+      run: python generate_graph_email_png_working.py
+
+
+    - name: Send Email Report
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 587
+        username: ${{ secrets.SMTP_USERNAME }}
+        password: ${{ secrets.SMTP_APP_PASSWORD }}
+        subject: "Weekly Security Report"
+        body: "Security reports attached."
+        to: "sony2887@gmail.com"
+        from: "pratikshatiwari10042@gmail.com"
+        attachments: security_report1.json, github_alerts_graph.png
+
