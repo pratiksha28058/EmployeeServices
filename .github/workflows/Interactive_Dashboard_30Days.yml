@@ -30,18 +30,18 @@ jobs:
         run: |
           python dashboard/Interactive_Dashboard_30Days_Mail.py & # Replace with your script name
 
-      - name: Send Email Report
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 587
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_APP_PASSWORD }}
-          subject: "Weekly Security Report"
-          body: "Security reports attached."
-          to: "sony2887@gmail.com"
-          from: "pratikshatiwari10042@gmail.com"
-          attachments: security_report1.json, github_alerts_graph.png
+      # - name: Send Email Report
+      #   uses: dawidd6/action-send-mail@v3
+      #   with:
+      #     server_address: smtp.gmail.com
+      #     server_port: 587
+      #     username: ${{ secrets.SMTP_USERNAME }}
+      #     password: ${{ secrets.SMTP_APP_PASSWORD }}
+      #     subject: "Weekly Security Report"
+      #     body: "Security reports attached."
+      #     to: "sony2887@gmail.com"
+      #     from: "pratikshatiwari10042@gmail.com"
+      #     attachments: security_report1.json, github_alerts_graph.png
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
