@@ -1,4 +1,4 @@
-name: Interactive_Dashboard_30Days to Azure App
+name: Interactive_Dashboard_30Days to Azure App 
 
 on:
   push:
