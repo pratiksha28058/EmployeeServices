@@ -21,7 +21,7 @@ REPO = 'EmployeeService'
 # TOKEN = os.getenv("GIT_TOKEN")  # Load token from environment variable
 # GITHUB_TOKEN = os.getenv("GIT_TOKEN")  # Load token from environment variable
 # # GitHub API configuration
-GITHUB_API_URL = "https://api.github.com/repos/pratiksha2805-eng/EmployeeService/code-scanning/alerts"
+GITHUB_API_URL = "https://api.github.com/repos/pratiksha28058/EmployeeService/code-scanning/alerts"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # Load token from environment variable
 
 # Fetch Security Alerts from GitHub API
