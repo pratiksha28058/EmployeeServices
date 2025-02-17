@@ -23,7 +23,7 @@ MarkupSafe==3.0.2
 mdurl==0.1.2
 msgpack==1.1.0
 narwhals==1.26.0
-numpy==2.2.3
+numpy>=1.21,<2.1
 packageurl-python==0.16.0
 packaging==24.2
 pandas==2.2.3
