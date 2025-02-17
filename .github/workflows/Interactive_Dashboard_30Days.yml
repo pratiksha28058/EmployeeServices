@@ -25,6 +25,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install dash pandas requests plotly
           #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -r dashboard/30days/requirements.txt  # Install dependencies
 
       - name: Run Python script
         run: |
