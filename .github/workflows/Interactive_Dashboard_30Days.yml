@@ -25,7 +25,7 @@ jobs:
           python -m pip install --upgrade pip
           #pip install dash pandas requests plotly
           #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          pip install -r dashboard/30days/requirements.txt  # Install dependencies
+          pip install -r dashboard/requirements.txt  # Install dependencies
 
       - name: Archive project files
         run: zip -r release.zip . -x "*.git*"
