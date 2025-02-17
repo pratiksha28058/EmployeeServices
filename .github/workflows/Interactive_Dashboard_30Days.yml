@@ -23,13 +23,16 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install dash pandas requests plotly
+          #pip install dash pandas requests plotly
           #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           pip install -r dashboard/30days/requirements.txt  # Install dependencies
 
-      - name: Run Python script
-        run: |
-          python dashboard/Interactive_Dashboard_30Days_Mail.py & # Replace with your script name
+      - name: Archive project files
+        run: zip -r release.zip . -x "*.git*"
+
+      # - name: Run Python script
+      #   run: |
+      #     python dashboard/Interactive_Dashboard_30Days_Mail.py & # Replace with your script name
 
       # - name: Send Email Report
       #   uses: dawidd6/action-send-mail@v3
@@ -49,4 +52,4 @@ jobs:
         with:
           app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: .
+          package: release.zip
