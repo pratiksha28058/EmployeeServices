@@ -9,128 +9,85 @@ load_dotenv()
 import pandas as pd
 print(pd.__version__)
 
-# Optionally load environment variables from a .env file
-from dotenv import load_dotenv
-load_dotenv()
 
-# Read configuration from environment variables
-GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
-GITHUB_OWNER = 'pratiksha28058'
-GITHUB_REPO = 'EmployeeServices'
-GITHUB_API_URL = "https://api.github.com/repos/pratiksha28058/EmployeeService/code-scanning/alerts"
+# Set GitHub Token and Repository Details
+GITHUB_TOKEN = "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"  # Set as an environment variable
+OWNER = "pratiksha28058"  # Replace with the GitHub organization or username
+REPO = "EmployeeServices"           # Replace with the repository name
+API_URL = f"https://api.github.com/repos/{OWNER}/{REPO}/code-scanning/alerts"
 
+# Flask Server for Dash
+server = Flask(__name__)
+app = dash.Dash(__name__, server=server)
 
-if not all([GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO]):
-    raise ValueError("Please set GITHUB_TOKEN, GITHUB_OWNER, and GITHUB_REPO environment variables.")
-
-# GitHub API endpoint for code scanning alerts
-API_URL = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/code-scanning/alerts"
-
-# Define headers for authentication
-headers = {
-    "Authorization": f"token {GITHUB_TOKEN}",
-    "Accept": "application/vnd.github.v3+json"
-}
-
-def fetch_code_scanning_alerts():
-    """
-    Fetch code scanning alerts from the GitHub API.
-    Note: For production, you might want to handle pagination.
-    """
+# Fetch GitHub Code Scanning Alerts
+def fetch_alerts():
+    headers = {
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github+json"
+    }
+    
     response = requests.get(API_URL, headers=headers)
+    
     if response.status_code == 200:
         return response.json()
+    elif response.status_code == 404:
+        raise ValueError("Repository not found or code scanning alerts are not enabled.")
+    elif response.status_code == 401:
+        raise ValueError("Unauthorized. Check your GITHUB_TOKEN and permissions.")
     else:
-        print(f"Error fetching alerts: {response.status_code} {response.text}")
-        return []
+        raise ValueError(f"Failed to fetch data. Status: {response.status_code}, Response: {response.text}")
 
-# Fetch alerts and create a DataFrame
-alerts = fetch_code_scanning_alerts()
+# Process Alerts Data
+def process_alerts(data):
+    severities = [alert.get("rule", {}).get("severity", "unknown") for alert in data]
+    return severities
 
-# Convert alerts to a DataFrame and filter for the last 30 days
-if alerts:
-    # Create DataFrame and parse dates
-    df = pd.DataFrame(alerts)
-    # Assume 'created_at' exists and convert to datetime
-    df['created_at'] = pd.to_datetime(df['created_at'])
-    
-    # Filter data to the last 30 days
-    thirty_days_ago = datetime.utcnow() - timedelta(days=30)
-    df = df[df['created_at'] >= thirty_days_ago]
+# Prepare Dashboard Layout
+def prepare_layout(severity_counts):
+    severity_data = [{"Severity": key, "Count": value} for key, value in severity_counts.items()]
+    df = px.data.tips()  # Create a DataFrame from severity_counts
 
-    # Extract the security severity level (assume field 'security_severity_level')
-    # Some alerts might not have this field – drop those rows
-    df = df[df['security_severity_level'].notnull()]
-    df['severity'] = df['security_severity_level'].str.lower()  # normalize to lowercase
-else:
-    # If no alerts are returned, create an empty DataFrame with the expected columns
-    df = pd.DataFrame(columns=['created_at', 'severity'])
-
-# Create a date range for the last 30 days
-date_range = pd.date_range(end=pd.Timestamp.utcnow(), periods=30).normalize()
-# Create an empty DataFrame with the date range as index
-df_counts = pd.DataFrame(index=date_range)
-
-# For each severity (error, warning, note), count alerts per day
-for sev in ['error', 'warning', 'note']:
-    # Filter alerts for this severity, group by date (normalize timestamp), and count
-    if not df.empty:
-        counts = df[df['severity'] == sev].groupby(df['created_at'].dt.normalize()).size()
-    else:
-        counts = pd.Series(dtype=int)
-    # Reindex to fill missing dates with 0
-    counts = counts.reindex(date_range, fill_value=0)
-    df_counts[sev.capitalize()] = counts
-
-# Reset index for plotting
-df_counts = df_counts.reset_index().rename(columns={'index': 'Date'})
-
-# -------------------------------
-# Build the Dash App
-# -------------------------------
-app = Dash(__name__)
-app.title = "GitHub Security Dashboard"
-
-app.layout = html.Div([
-    html.H1("GitHub Security Code Scanning Alerts (Last 30 Days)"),
-    html.P("Select a severity type:"),
-    dcc.Dropdown(
-        id='severity-dropdown',
-        options=[
-            {'label': 'Error', 'value': 'Error'},
-            {'label': 'Warning', 'value': 'Warning'},
-            {'label': 'Note', 'value': 'Note'}
-        ],
-        value='Error',
-        clearable=False
-    ),
-    dcc.Graph(id='severity-chart'),
-    html.Hr(),
-    html.H2("Raw Data"),
-    dash_table.DataTable(
-        id='data-table',
-        columns=[{"name": col, "id": col} for col in df_counts.columns],
-        data=df_counts.to_dict('records'),
-        page_size=10,
+    # Bar chart using Plotly
+    fig = px.bar(
+        severity_data,
+        x="Severity",
+        y="Count",
+        color="Severity",
+        title="GitHub Code Scanning Alerts by Severity",
+        labels={"Severity": "Severity", "Count": "Number of Alerts"}
     )
-])
 
-@app.callback(
-    Output('severity-chart', 'figure'),
-    [Input('severity-dropdown', 'value')]
-)
-def update_chart(selected_severity):
-    fig = px.line(df_counts, x='Date', y=selected_severity, 
-                  title=f"{selected_severity} Alerts Over the Last 30 Days",
-                  markers=True)
-    fig.update_layout(
-        xaxis_title="Date",
-        yaxis_title="Count",
-        template="plotly_white"
-    )
-    return fig
+    # Set up layout
+    app.layout = html.Div(children=[
+        html.H1("GitHub Code Security Dashboard", style={"textAlign": "center"}),
+        dcc.Graph(id="alerts-graph", figure=fig),
+        html.Div("Interactive dashboard for Errors, Warnings, and Notes.")
+    ])
 
-if __name__ == '__main__':
-    # The app listens on port 8050 by default
-    port = int(os.environ.get("PORT", 8050))
-    app.run_server(debug=True, host='0.0.0.0', port=port)
+# Main Function
+def main():
+    try:
+        # Fetch alerts
+        alerts = fetch_alerts()
+
+        # Process alerts
+        severities = process_alerts(alerts)
+
+        # Count alerts by severity
+        severity_counts = {sev: severities.count(sev) for sev in set(severities)}
+
+        # Debug: Print severity counts
+        print(f"Severity Counts: {severity_counts}")
+
+        # Prepare layout
+        prepare_layout(severity_counts)
+
+        # Run the dashboard
+        app.run_server(debug=True)
+    except Exception as e:
+        print(f"Error: {e}")
+
+# Run the script
+if __name__ == "__main__":
+    main()
