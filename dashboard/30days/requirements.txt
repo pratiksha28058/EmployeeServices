@@ -17,13 +17,17 @@ narwhals==1.28.0
 nest-asyncio==1.6.0
 numpy==2.2.3
 packaging==24.2
+pandas==2.2.3
 plotly==6.0.0
+python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
+pytz==2025.1
 requests==2.32.3
 retrying==1.3.4
 setuptools==75.8.0
 six==1.17.0
 typing_extensions==4.12.2
+tzdata==2025.1
 urllib3==2.3.0
 Werkzeug==3.0.6
 zipp==3.21.0
