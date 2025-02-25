@@ -1,10 +1,13 @@
 import os
 import requests
-import pandas as pd
-from datetime import datetime, timedelta
-from dash import Dash, dcc, html, dash_table
-from dash.dependencies import Input, Output
 import plotly.express as px
+from flask import Flask
+import dash
+from dash import dcc, html
+from dotenv import load_dotenv
+load_dotenv()
+import pandas as pd
+print(pd.__version__)
 
 # Optionally load environment variables from a .env file
 from dotenv import load_dotenv
