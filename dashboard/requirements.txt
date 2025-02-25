@@ -6,7 +6,7 @@ charset-normalizer==3.4.0
 click==8.1.7
 colorama==0.4.6
 cyclonedx-python-lib==7.6.2
-dash==2.9.3
+dash==2.15.0
 dash-core-components==2.0.0
 dash-html-components==2.0.0
 dash-table==5.0.0
